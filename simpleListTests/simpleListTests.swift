@@ -10,9 +10,13 @@ import XCTest
 @testable import simpleList
 
 class simpleListTests: XCTestCase {
-    
+    var vcTable:ViewController!
     override func setUp() {
         super.setUp()
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc: ViewController = storyboard.instantiateViewController(withIdentifier: "ViewController") as! ViewController
+        vcTable = vc
+        _ = vcTable.view
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }
     
@@ -21,11 +25,10 @@ class simpleListTests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testFirstPerson(){
+        XCTAssertEqual(vcTable.person[0],"Sam")
     }
-    
+
     func testPerformanceExample() {
         // This is an example of a performance test case.
         self.measure {
