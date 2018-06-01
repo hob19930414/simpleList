@@ -1,0 +1,21 @@
+git_url "git@github.com:TribalScale/ios-certificates-new.git"
+
+type "development" # The default type, can be: appstore, adhoc, enterprise or development
+
+# The bundle identifier(s) of your app (comma-separated)
+app_identifier ["com.tribalscale.beachSimpleList"]
+
+# Your Apple Developer Portal username
+username "qa1@tribalscale.com" # Your Apple Developer Portal username
+
+# The ID of your Developer Portal team if you're in multiple teams
+team_id "8EU22292BA"
+
+# The name of our Developer Portal team if you're in multiple teams
+team_name "TribalScale Inc."
+
+# Renew the provisioning profiles if the device count on the developer portal has changed
+force_for_new_devices "true"
+
+# For all available options run `fastlane match --help`
+# Remove the # in the beginning of the line to enable the other options
